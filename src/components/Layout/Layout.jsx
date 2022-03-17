@@ -37,8 +37,8 @@ const LayoutComponent = ({ children }) => {
     return (
         <Layout id='mainLayout'>
             <Sider trigger={null} collapsible collapsed={collapsed}>
-                <div className="logo">logo</div>
-                <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+                <div className="logo" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>LOGO</div>
+                <Menu className={style.menu} theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                     <Menu.Item key="1" icon={<BarChartOutlined />}>
                         Analytics
                     </Menu.Item>
