@@ -1,0 +1,46 @@
+.headerLeft {
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+}
+
+.headerLeft button {
+    margin: 0 5px 0 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-left: 1px solid #c5c5c5;
+    margin-left: 20px;
+    padding-left: 20px;
+    color: #c5c5c5;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 10px;
+}
+
+.profileDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+}
+
+.profileDesc h4 {
+    line-height: 1;
+    font-weight: bold;
+}
+
+.profileDesc span {
+    color: #c5c5c5;
+    line-height: 1;
+    font-size: 13px;
+}
