@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Badge, Button, Dropdown, Layout, Menu, Modal, PageHeader, Popover, Tooltip } from 'antd';
+import { Badge, Button, Dropdown, Layout, Menu, Modal, PageHeader, Tooltip } from 'antd';
 import style from './Layout.module.css';
 import {
     MenuUnfoldOutlined,
@@ -97,6 +97,7 @@ const LayoutComponent = ({ children }) => {
         setCollapsed(!collapsed)
     };
 
+    // settings modal
     const handleOk = () => {
         setConfirmLoading(true);
         setTimeout(() => {
@@ -107,6 +108,19 @@ const LayoutComponent = ({ children }) => {
 
     const handleCancel = () => {
         setVisibleSettings(false);
+    };
+
+    // notification modal
+    const handleOkNotifications = () => {
+        setConfirmLoading(true);
+        setTimeout(() => {
+            setVisible(false);
+            setConfirmLoading(false);
+        }, 2000);
+    };
+
+    const handleCancelNotifications = () => {
+        setVisible(false);
     };
 
     return (
@@ -132,6 +146,7 @@ const LayoutComponent = ({ children }) => {
                         </div>
                         <div className={style.headerRight}>
 
+                            {/* settings button */}
                             <Tooltip onClick={() => setVisibleSettings(!visibleSettings)}>
                                 <Button type="primary" shape="circle" size='large' icon={<SettingOutlined />} />
                             </Tooltip>
@@ -141,8 +156,6 @@ const LayoutComponent = ({ children }) => {
                                 title="Settings"
                                 confirmLoading={confirmLoading}
                                 visible={visibleSettings}
-                                onOk={() => handleOk()}
-                                onCancel={() => handleCancel()}
                                 footer={[
                                     <Button key="back" onClick={() => handleCancel()}>
                                         Cancel
@@ -157,19 +170,31 @@ const LayoutComponent = ({ children }) => {
                                 <p>Some Settings...</p>
                             </Modal>
 
-                            <Popover
-                                content={<div>empty notifications</div>}
+                            {/* notifications button */}
+                            <Tooltip onClick={() => setVisible(!visible)}>
+                                <Badge count={1} offset={[-10, 5]}>
+                                    <Button type="primary" shape="circle" size='large' icon={<BellOutlined />} />
+                                </Badge>
+                            </Tooltip>
+
+                            {/* notifications modal */}
+                            <Modal
                                 title="Notifications"
-                                trigger="click"
+                                confirmLoading={confirmLoading}
                                 visible={visible}
-                                onVisibleChange={() => setVisible(!visible)}
+                                footer={[
+                                    <Button key="back" onClick={() => handleCancelNotifications()}>
+                                        Cancel
+                                    </Button>,
+                                    <Button key="submit" type="primary" loading={confirmLoading} onClick={() => handleOkNotifications()}>
+                                        Save
+                                    </Button>
+                                ]}
                             >
-                                <Tooltip onClick={() => setVisible(!visible)}>
-                                    <Badge count={1} offset={[-10, 5]}>
-                                        <Button type="primary" shape="circle" size='large' icon={<BellOutlined />} />
-                                    </Badge>
-                                </Tooltip>
-                            </Popover>
+                                <p>Some Settings...</p>
+                                <p>Some Settings...</p>
+                                <p>Some Settings...</p>
+                            </Modal>
 
                             <Dropdown overlay={dropDownMenu} trigger={['click']}>
                                 <button className={`ant-dropdown-link ${style.profile}`} onClick={e => e.preventDefault()}>
