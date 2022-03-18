@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card, Table, Tag, Space, Avatar } from 'antd'
+import { Button, Card, Table, Space, Avatar } from 'antd'
 import { DeleteOutlined, FieldTimeOutlined, KeyOutlined, PlusOutlined } from '@ant-design/icons'
 
 const Profiles = () => {
