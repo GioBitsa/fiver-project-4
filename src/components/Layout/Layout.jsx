@@ -156,6 +156,7 @@ const LayoutComponent = ({ children }) => {
                                 title="Settings"
                                 confirmLoading={confirmLoading}
                                 visible={visibleSettings}
+                                onCancel={() => handleCancel()}
                                 footer={[
                                     <Button key="back" onClick={() => handleCancel()}>
                                         Cancel
@@ -182,6 +183,7 @@ const LayoutComponent = ({ children }) => {
                                 title="Notifications"
                                 confirmLoading={confirmLoading}
                                 visible={visible}
+                                onCancel={() => handleCancelNotifications()}
                                 footer={[
                                     <Button key="back" onClick={() => handleCancelNotifications()}>
                                         Cancel
