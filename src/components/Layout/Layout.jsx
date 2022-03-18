@@ -6,7 +6,6 @@ import {
     MenuFoldOutlined,
     BarChartOutlined,
     AppstoreOutlined,
-    UserOutlined,
     ContactsOutlined,
     InboxOutlined,
     UserSwitchOutlined,
@@ -128,14 +127,14 @@ const LayoutComponent = ({ children }) => {
 
 
                             <Dropdown overlay={dropDownMenu} trigger={['click']}>
-                                <a className={`ant-dropdown-link ${style.profile}`} onClick={e => e.preventDefault()}>
-                                    <img src="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo=" alt="profile image" />
+                                <button className={`ant-dropdown-link ${style.profile}`} onClick={e => e.preventDefault()}>
+                                    <img src="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo=" alt="profile" />
                                     <div className={style.profileDesc}>
                                         <h4>Nevo David</h4>
                                         <span>Master Account</span>
                                     </div>
                                     <DownOutlined />
-                                </a>
+                                </button>
                             </Dropdown>
                         </div>
                     </div>
