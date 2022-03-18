@@ -13,6 +13,7 @@ import {
     SettingOutlined,
     BellOutlined,
     DownOutlined,
+    UserOutlined,
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
@@ -49,36 +50,43 @@ const checkSelectedMenuItem = () => {
 
 const menuItemsContent = [
     {
+        key: 0,
         title: 'Analytics',
         icon: <BarChartOutlined />,
         path: '/analytics'
     },
     {
+        key: 1,
         title: 'Workflows',
         icon: <AppstoreOutlined />,
         path: '/workflows'
     },
     {
+        key: 2,
         title: 'Account',
-        icon: <BarChartOutlined />,
+        icon: <UserOutlined />,
         path: '/account'
     },
     {
+        key: 3,
         title: 'Contacts',
         icon: <ContactsOutlined />,
         path: '/contacts'
     },
     {
+        key: 4,
         title: 'Inbox',
         icon: <InboxOutlined />,
         path: '/inbox'
     },
     {
+        key: 5,
         title: 'Admin',
         icon: <UserSwitchOutlined />,
         path: '/admin'
     },
     {
+        key: 6,
         title: 'Biling',
         icon: <WalletOutlined />,
         path: '/billing'
@@ -91,7 +99,7 @@ const LayoutComponent = ({ children }) => {
     const [visible, setVisible] = useState(false);
     const [visibleSettings, setVisibleSettings] = useState(false);
     const [confirmLoading, setConfirmLoading] = useState(false);
-    const [headerTitle, setHeaderTitle] = useState(menuItemsContent[0])
+    const [headerTitle, setHeaderTitle] = useState(menuItemsContent[checkSelectedMenuItem()])
 
     const toggle = () => {
         setCollapsed(!collapsed)
