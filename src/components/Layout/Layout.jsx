@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Badge, Button, Dropdown, Layout, Menu, PageHeader, Tooltip } from 'antd';
+import { Badge, Button, Dropdown, Layout, Menu, Modal, PageHeader, Popover, Tooltip } from 'antd';
 import style from './Layout.module.css';
 import {
     MenuUnfoldOutlined,
@@ -88,10 +88,25 @@ const menuItemsContent = [
 const LayoutComponent = ({ children }) => {
 
     const [collapsed, setCollapsed] = useState(false);
+    const [visible, setVisible] = useState(false);
+    const [visibleSettings, setVisibleSettings] = useState(false);
+    const [confirmLoading, setConfirmLoading] = useState(false);
     const [headerTitle, setHeaderTitle] = useState(menuItemsContent[0])
 
     const toggle = () => {
         setCollapsed(!collapsed)
+    };
+
+    const handleOk = () => {
+        setConfirmLoading(true);
+        setTimeout(() => {
+            setVisibleSettings(false);
+            setConfirmLoading(false);
+        }, 2000);
+    };
+
+    const handleCancel = () => {
+        setVisibleSettings(false);
     };
 
     return (
@@ -116,15 +131,45 @@ const LayoutComponent = ({ children }) => {
                             <PageHeader title={[headerTitle.icon, ' ', headerTitle.title]} />
                         </div>
                         <div className={style.headerRight}>
-                            <Tooltip title="settings">
+
+                            <Tooltip onClick={() => setVisibleSettings(!visibleSettings)}>
                                 <Button type="primary" shape="circle" size='large' icon={<SettingOutlined />} />
                             </Tooltip>
-                            <Tooltip title="notifications">
-                                <Badge count={1} offset={[-10, 5]}>
-                                    <Button type="primary" shape="circle" size='large' icon={<BellOutlined />} />
-                                </Badge>
-                            </Tooltip>
 
+                            {/* settings modal */}
+                            <Modal
+                                title="Settings"
+                                confirmLoading={confirmLoading}
+                                visible={visibleSettings}
+                                onOk={() => handleOk()}
+                                onCancel={() => handleCancel()}
+                                footer={[
+                                    <Button key="back" onClick={() => handleCancel()}>
+                                        Cancel
+                                    </Button>,
+                                    <Button key="submit" type="primary" loading={confirmLoading} onClick={() => handleOk()}>
+                                        Save
+                                    </Button>
+                                ]}
+                            >
+                                <p>Some Settings...</p>
+                                <p>Some Settings...</p>
+                                <p>Some Settings...</p>
+                            </Modal>
+
+                            <Popover
+                                content={<div>empty notifications</div>}
+                                title="Notifications"
+                                trigger="click"
+                                visible={visible}
+                                onVisibleChange={() => setVisible(!visible)}
+                            >
+                                <Tooltip onClick={() => setVisible(!visible)}>
+                                    <Badge count={1} offset={[-10, 5]}>
+                                        <Button type="primary" shape="circle" size='large' icon={<BellOutlined />} />
+                                    </Badge>
+                                </Tooltip>
+                            </Popover>
 
                             <Dropdown overlay={dropDownMenu} trigger={['click']}>
                                 <button className={`ant-dropdown-link ${style.profile}`} onClick={e => e.preventDefault()}>
