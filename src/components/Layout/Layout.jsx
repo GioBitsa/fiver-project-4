@@ -27,6 +27,27 @@ const dropDownMenu = (
     </Menu>
 );
 
+const checkSelectedMenuItem = () => {
+    switch (window.location.pathname) {
+        case '/analytics':
+            return (['0']);
+        case '/workflows':
+            return (['1']);
+        case '/account':
+            return (['2']);
+        case '/contacts':
+            return (['3']);
+        case '/inbox':
+            return (['4']);
+        case '/admin':
+            return (['5']);
+        case '/billing':
+            return (['6']);
+        default:
+            return (['0']);
+    }
+}
+
 const menuItemsContent = [
     {
         title: 'Analytics',
@@ -78,7 +99,7 @@ const LayoutComponent = ({ children }) => {
         <Layout id='mainLayout'>
             <Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="logo" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>LOGO</div>
-                <Menu className={style.menu} theme="dark" mode="inline" defaultSelectedKeys={['0']}>
+                <Menu className={style.menu} theme="dark" mode="inline" selectedKeys={checkSelectedMenuItem()}>
                     {menuItemsContent.map((item, index) => {
                         return (
                             <Menu.Item key={index} icon={item.icon} onClick={() => setHeaderTitle(item)}>
