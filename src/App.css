@@ -23,3 +23,7 @@
 .site-layout .site-layout-background {
     background: #fff;
 }
+
+.ant-card {
+    border-radius: 10px !important;
+}

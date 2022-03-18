@@ -1,10 +1,10 @@
 import React from 'react'
-import { LayoutComponent } from '../../components'
+import { LayoutComponent, Socials } from '../../components'
 
 const Account = () => {
     return (
         <LayoutComponent>
-            accounts
+            <Socials />
         </LayoutComponent>
     )
 }
