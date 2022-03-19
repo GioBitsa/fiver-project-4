@@ -15,10 +15,11 @@
 .headerLeft {
     display: flex;
     align-items: center;
+    min-height: 64px;
 }
 
 .headerRight {
-    padding: 0 24px;
+    padding-right: 24px;
     display: flex;
     align-items: center;
 }
@@ -64,4 +65,32 @@
     color: #c5c5c5;
     line-height: 1;
     font-size: 13px;
+}
+
+@media screen and (max-width: 768px) {
+    .headerBtn {
+        min-width: 32px !important;
+        width: 32px !important;
+        height: 32px !important;
+        margin: 0 5px !important;
+        text-align: center !important;
+        border-radius: 50% !important;        
+        padding: 2.4px 0 !important;
+        font-size: 16px !important;
+    }
+    .headerTitle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .headerLeft span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .headerRight {
+        padding: 0;
+    }
 }

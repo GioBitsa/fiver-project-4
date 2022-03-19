@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { Button, Card, Table, Space, Avatar, Modal } from 'antd'
-import { DeleteOutlined, FieldTimeOutlined, KeyOutlined, PlusOutlined } from '@ant-design/icons'
+import React, { useState } from 'react';
+import { Button, Card, Table, Space, Avatar, Modal } from 'antd';
+import { DeleteOutlined, FieldTimeOutlined, KeyOutlined, PlusOutlined } from '@ant-design/icons';
+import style from './Profiles.module.css';
 
 const Profiles = () => {
 
@@ -13,7 +14,7 @@ const Profiles = () => {
             dataIndex: 'name',
             key: 'name',
             render: (text, record) => (
-                <Space size="small" align="center">
+                <Space style={{ minWidth: '150px' }} size="small" align="center">
                     <Avatar size="large" style={{ backgroundColor: `${record.avatar}` }}>S</Avatar>
                     <span>{text}</span>
                 </Space>
@@ -34,7 +35,8 @@ const Profiles = () => {
             title: 'Status',
             dataIndex: 'status',
             key: 'status',
-            render: text => text ? 'Active' : 'Not Active'
+            render: text => text ? 'Active' : 'Not Active',
+            responsive: ['lg']
         },
         {
             title: 'Company',
@@ -46,9 +48,9 @@ const Profiles = () => {
             key: 'actions',
             render: () => (
                 <Space size="middle">
-                    <Button shape="circle" icon={<DeleteOutlined />} size='large' />
-                    <Button shape="circle" icon={<FieldTimeOutlined />} size='large' />
-                    <Button shape="circle" icon={<KeyOutlined />} size='large' />
+                    <Button className={style.tableBtn} shape="circle" icon={<DeleteOutlined />} size='large' />
+                    <Button className={style.tableBtn} shape="circle" icon={<FieldTimeOutlined />} size='large' />
+                    <Button className={style.tableBtn} shape="circle" icon={<KeyOutlined />} size='large' />
                 </Space>
             ),
         },
@@ -97,7 +99,7 @@ const Profiles = () => {
     return (
         <>
             <Card title="Profiles" extra={<Button onClick={() => setVisible(true)} type='primary' icon={<PlusOutlined />} size="large">Add New Account</Button>}>
-                <Table columns={columns} dataSource={data} />
+                <Table className={style.table} columns={columns} dataSource={data} />
             </Card>
             {/* add button modal */}
             <Modal

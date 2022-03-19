@@ -16,7 +16,7 @@ const Socials = () => {
         swipeToSlide: true,
         responsive: [
             {
-                breakpoint: 1100,
+                breakpoint: 900,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 2,
@@ -24,11 +24,19 @@ const Socials = () => {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
                 }
             },
         ]

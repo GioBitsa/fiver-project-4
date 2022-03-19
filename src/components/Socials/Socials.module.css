@@ -32,3 +32,29 @@
         width: 150px;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .socialsContainer {
+        flex-direction: column;
+    }
+    .reactSlickContainer {
+        width: 100%;
+        margin: 0;
+    }
+    .avatarsGroup {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reactSlickContainer img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .reactSlickContainer img {
+        width: 100%;
+    }
+}

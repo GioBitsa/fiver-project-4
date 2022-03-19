@@ -133,7 +133,7 @@ const LayoutComponent = ({ children }) => {
 
     return (
         <Layout id='mainLayout'>
-            <Sider trigger={null} collapsible collapsed={collapsed}>
+            <Sider breakpoint='sm' onBreakpoint={() => setCollapsed(true)} trigger={null} collapsible collapsed={collapsed}>
                 <div className="logo" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>LOGO</div>
                 <Menu className={style.menu} theme="dark" mode="inline" selectedKeys={checkSelectedMenuItem()}>
                     {menuItemsContent.map((item, index) => {
@@ -150,13 +150,13 @@ const LayoutComponent = ({ children }) => {
                     <div className="d-flex-space-between">
                         <div className={style.headerLeft}>
                             {collapsed ? <MenuUnfoldOutlined className='trigger' onClick={() => toggle()} /> : <MenuFoldOutlined className='trigger' onClick={() => toggle()} />}
-                            <PageHeader title={[headerTitle.icon, ' ', headerTitle.title]} />
+                            <PageHeader className={style.headerTitle} title={[headerTitle.icon, ' ', headerTitle.title]} />
                         </div>
                         <div className={style.headerRight}>
 
                             {/* settings button */}
                             <Tooltip onClick={() => setVisibleSettings(!visibleSettings)}>
-                                <Button type="primary" shape="circle" size='large' icon={<SettingOutlined />} />
+                                <Button className={style.headerBtn} type="primary" shape="circle" size='large' icon={<SettingOutlined />} />
                             </Tooltip>
 
                             {/* settings modal */}
@@ -182,7 +182,7 @@ const LayoutComponent = ({ children }) => {
                             {/* notifications button */}
                             <Tooltip onClick={() => setVisible(!visible)}>
                                 <Badge count={1} offset={[-10, 5]}>
-                                    <Button type="primary" shape="circle" size='large' icon={<BellOutlined />} />
+                                    <Button className={style.headerBtn} type="primary" shape="circle" size='large' icon={<BellOutlined />} />
                                 </Badge>
                             </Tooltip>
 
