@@ -1,8 +1,11 @@
-import React from 'react'
-import { Button, Card, Table, Space, Avatar } from 'antd'
+import React, { useState } from 'react'
+import { Button, Card, Table, Space, Avatar, Modal } from 'antd'
 import { DeleteOutlined, FieldTimeOutlined, KeyOutlined, PlusOutlined } from '@ant-design/icons'
 
 const Profiles = () => {
+
+    const [visible, setVisible] = useState(false);
+    const [confirmLoading, setConfirmLoading] = useState(false);
 
     const columns = [
         {
@@ -78,10 +81,44 @@ const Profiles = () => {
         },
     ];
 
+    // add button modal
+    const handleOk = () => {
+        setConfirmLoading(true);
+        setTimeout(() => {
+            setVisible(false);
+            setConfirmLoading(false);
+        }, 2000);
+    };
+
+    const handleCancel = () => {
+        setVisible(false);
+    };
+
     return (
-        <Card title="Profiles" extra={<Button type='primary' icon={<PlusOutlined />} size="large">Add New Account</Button>}>
-            <Table columns={columns} dataSource={data} />
-        </Card>
+        <>
+            <Card title="Profiles" extra={<Button onClick={() => setVisible(true)} type='primary' icon={<PlusOutlined />} size="large">Add New Account</Button>}>
+                <Table columns={columns} dataSource={data} />
+            </Card>
+            {/* add button modal */}
+            <Modal
+                title="Add New Account"
+                confirmLoading={confirmLoading}
+                visible={visible}
+                onCancel={() => handleCancel()}
+                footer={[
+                    <Button key="back" onClick={() => handleCancel()}>
+                        Cancel
+                    </Button>,
+                    <Button key="submit" type="primary" loading={confirmLoading} onClick={() => handleOk()}>
+                        Save
+                    </Button>
+                ]}
+            >
+                <p>Some accounts...</p>
+                <p>Some accounts...</p>
+                <p>Some accounts...</p>
+            </Modal>
+        </>
     )
 }
 
