@@ -1,0 +1,17 @@
+
+.buttonsContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.buttonsContainer button {
+    margin: 0 10px 10px 0;
+}
+
+.inputsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    width: 100%;
+}
