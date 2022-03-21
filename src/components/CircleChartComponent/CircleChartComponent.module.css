@@ -1,0 +1,51 @@
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.flexContainer {
+    display: flex;
+    align-items: center;
+}
+
+.flexContainer > div {
+    flex: 1;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.textContent > div {
+    margin: 10px 0;
+}
+
+.textContent .subTitle {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.textContent .subTitle h5 {
+    font-weight: bold;
+    position: relative;
+    margin: 0 0 0 5px;
+}
+
+.textContent .subTitle span {
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    border-radius: 20px;
+}
+
+.textContent p {
+    color: rgba(18, 18, 18, 0.7);
+    padding-left: 35px;
+}
