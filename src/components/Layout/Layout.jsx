@@ -131,9 +131,15 @@ const LayoutComponent = ({ children }) => {
         setVisible(false);
     };
 
+    const checkResponsive = () => {
+        if (window.innerWidth < 576) {
+            setCollapsed(true)
+        }
+    }
+
     return (
         <Layout id='mainLayout'>
-            <Sider breakpoint='sm' onBreakpoint={() => setCollapsed(true)} trigger={null} collapsible collapsed={collapsed}>
+            <Sider breakpoint='sm' onBreakpoint={() => checkResponsive()} trigger={null} collapsible collapsed={collapsed}>
                 <div className="logo" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>LOGO</div>
                 <Menu className={style.menu} theme="dark" mode="inline" selectedKeys={checkSelectedMenuItem()}>
                     {menuItemsContent.map((item, index) => {

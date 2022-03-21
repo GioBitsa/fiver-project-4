@@ -10,8 +10,12 @@
     align-items: center;
 }
 
-.flexContainer > div {
-    flex: 1;
+.flexContainer > div:nth-child(1) {
+    width: 360px !important;
+}
+
+.flexContainer > div:nth-child(2) {
+    width: 100%;
 }
 
 .textContent {
@@ -40,12 +44,12 @@
 
 .textContent .subTitle span {
     display: inline-block;
-    width: 30px;
+    width: 20px;
     height: 4px;
     border-radius: 20px;
 }
 
 .textContent p {
     color: rgba(18, 18, 18, 0.7);
-    padding-left: 35px;
+    padding-left: 25px;
 }
