@@ -8,21 +8,21 @@ import CircleChartComponent from '../CircleChartComponent/CircleChartComponent'
 
 const Statistics = () => {
     return (
-        <Row gutter={[8, 8]}>
-            <Col span={8}>
+        <Row gutter={[8, 8]} >
+            <Col span={24} md={{ span: 12, }} xl={{ span: 8, }}>
                 <ConnectionChart />
             </Col>
-            <Col span={8}>
+            <Col span={24} md={{ span: 12 }} xl={{ span: 8, }}>
                 <FollowChart />
             </Col>
-            <Col span={8}>
+            <Col span={24} md={{ span: 12 }} xl={{ span: 8, }}>
                 <EmailChart />
             </Col>
 
-            <Col span={8}>
+            <Col span={24} md={{ span: 12 }} xl={{ span: 8, }}>
                 <CircleChartComponent />
             </Col>
-            <Col span={16}>
+            <Col span={24} md={{ span: 24 }} xl={{ span: 16, }}>
                 <BarChartComponent />
             </Col>
         </Row>

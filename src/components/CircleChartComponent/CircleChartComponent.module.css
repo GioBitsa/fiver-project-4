@@ -53,3 +53,16 @@
     color: rgba(18, 18, 18, 0.7);
     padding-left: 25px;
 }
+
+
+@media screen and (max-width: 1400px) {
+    .flexContainer > div:nth-child(1) {
+        width: 170px !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+}
