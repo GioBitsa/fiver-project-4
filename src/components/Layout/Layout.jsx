@@ -226,6 +226,7 @@ const LayoutComponent = ({ children }) => {
                     </div>
                 </Header>
                 <Content
+                    id='layoutSections'
                     className="site-layout-background"
                     style={{
                         // margin: '24px 16px',
