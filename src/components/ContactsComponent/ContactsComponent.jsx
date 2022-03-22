@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
-import { Card, Table, Tag, Space, Avatar, Popover, Button } from 'antd'
+import React from 'react'
+import { Card, Table, Tag, Space, Avatar } from 'antd'
 import style from './ContactsComponent.module.css'
 import { ManOutlined, WomanOutlined } from '@ant-design/icons';
 import TableTags from './components/TableTags';
 
 const ContactsComponent = () => {
-
-    const [visible, setVisible] = useState(false)
 
     const columns = [
         {
