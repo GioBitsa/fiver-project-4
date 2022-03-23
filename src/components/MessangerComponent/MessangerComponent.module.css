@@ -1,0 +1,45 @@
+
+.mainContainer {
+    width: 100%;
+    display: flex;
+}
+
+.mainContainer > div:nth-child(1) {
+    flex: 1;
+    min-width: 350px;
+    padding-right: 24px;
+}
+
+.mainContainer > div:nth-child(2) {
+    flex: 2;
+}
+
+.spaceContainer {
+    width: 100%;
+}
+
+.spaceContainer > div:nth-child(1) {
+    width: 100% !important;
+}
+
+.tagsContainer {
+    width: 100%;
+    display: flex;
+    margin: 1rem 0;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+
+.tagsContainer::-webkit-scrollbar {
+    height: 4px;
+}
+
+.tagsContainer::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 10px;
+}
+
+.tagButton {
+    padding: 5px 10px !important;
+    color: #9e9e9e !important;
+}
