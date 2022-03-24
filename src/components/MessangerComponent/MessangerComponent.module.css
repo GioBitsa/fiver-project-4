@@ -1,17 +1,30 @@
 
 .mainContainer {
     width: 100%;
+    height: 100%;
     display: flex;
 }
 
 .mainContainer > div:nth-child(1) {
-    flex: 1;
-    min-width: 350px;
+    width: 350px;
     padding-right: 24px;
 }
 
 .mainContainer > div:nth-child(2) {
     flex: 2;
+    background-color: #ede8ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.barIcon {
+    position: absolute;
+    font-size: 24px;
+    top: 10px;
+    left: 10px;
+    display: none !important;
 }
 
 .spaceContainer {
@@ -42,4 +55,94 @@
 .tagButton {
     padding: 5px 10px !important;
     color: #9e9e9e !important;
+}
+
+/* user component */
+
+.userContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.imgContainer img:nth-child(1){
+    width: 40px;
+    height: 40px;
+    transform: translate(10px, -10px);
+    border: 2px solid #1890ff;
+}
+
+.imgContainer img:nth-child(2){
+    width: 60px;
+    height: 60px;
+}
+
+.userAbout {
+    flex: 5;
+    overflow: hidden;
+}
+
+.userAbout p {
+    white-space: nowrap;
+}
+
+.otherDetails {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.otherDetails svg {
+    margin-top: 7px;
+    font-size: 21px;
+    color: #1890ff;
+}
+
+@media screen and (max-width: 1000px) {
+    .mainContainer > div:nth-child(1) {
+        width: 300px;
+    }
+    .imgContainer img:nth-child(1){
+        width: 30px;
+        height: 30px;
+    }
+    
+    .imgContainer img:nth-child(2){
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .barIcon {
+        display: block !important;
+    }
+    .mainContainer > div:nth-child(1) {
+        width: initial;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .barIcon {
+        display: block !important;
+    }
+    .mainContainer > div:nth-child(1) {
+        width: initial;
+        padding: 0;
+    }
 }

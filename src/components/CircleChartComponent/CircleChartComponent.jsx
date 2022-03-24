@@ -13,7 +13,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28',];
 
 const CircleChartComponent = () => {
     return (
-        <Card>
+        <Card style={{ height: 'calc(100% - 20px)' }}>
             <div className={style.title}>
                 Best Performing Workflow
             </div>
