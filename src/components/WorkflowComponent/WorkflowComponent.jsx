@@ -38,7 +38,7 @@ const WorkflowComponent = () => {
                         content={[
                             {
                                 title: "Account",
-                                content: "Nevo David"
+                                content: "Hanna Gourie"
                             },
                             {
                                 title: "URL",
@@ -55,7 +55,7 @@ const WorkflowComponent = () => {
                         content={[
                             {
                                 title: "Account",
-                                content: "Nevo David"
+                                content: "Hanna Gourie"
                             },
                             {
                                 title: "URL",
@@ -74,7 +74,7 @@ const WorkflowComponent = () => {
                         content={[
                             {
                                 title: "Account",
-                                content: "Nevo David"
+                                content: "Hanna Gourie"
                             },
                             {
                                 title: "URL",
