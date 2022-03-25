@@ -43,6 +43,18 @@
     width: 100% !important;
 }
 
+#workflowComponent .ant-card {
+    margin-bottom: 0 !important;
+}
+
+#workflowComponent .ant-drawer-content-wrapper {
+    width: 100% !important;
+}
+
+#workflowComponent .ant-drawer-body {
+    padding: 12px 24px !important;
+}
+
 @media screen and (max-width: 768px) {
     #layoutSections {
         padding: 24px 10px !important;

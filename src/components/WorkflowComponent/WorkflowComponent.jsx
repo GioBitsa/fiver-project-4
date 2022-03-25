@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Card, Form, Input, Select, Space } from 'antd'
 import style from './WorkflowComponent.module.css'
+import CardComponent from './components/CardComponent';
 
 const { Option } = Select;
 
@@ -28,6 +29,65 @@ const WorkflowComponent = () => {
                     </Space>
                 </Form>
             </Card>
+            <div className={style.workflowMainContainer}>
+                <div>
+                    <CardComponent
+                        profileCard={true}
+                        title="Grap Profiles"
+                        color="#1890ff"
+                        content={[
+                            {
+                                title: "Account",
+                                content: "Nevo David"
+                            },
+                            {
+                                title: "URL",
+                                content: "lorem ipsum lorem ipsum lorem ipsum"
+                            }
+                        ]}
+                    />
+                </div>
+                <div className={style.workflowSecondaryContainer}>
+                    <CardComponent
+                        profileCard={true}
+                        title="Grap Profiles"
+                        color="#309535"
+                        content={[
+                            {
+                                title: "Account",
+                                content: "Nevo David"
+                            },
+                            {
+                                title: "URL",
+                                content: "lorem ipsum lorem ipsum lorem ipsum"
+                            },
+                            {
+                                title: "Message",
+                                content: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+                            }
+                        ]}
+                    />
+                    <CardComponent
+                        profileCard={true}
+                        title="Grap Profiles"
+                        color="#9846e2"
+                        content={[
+                            {
+                                title: "Account",
+                                content: "Nevo David"
+                            },
+                            {
+                                title: "URL",
+                                content: "lorem ipsum lorem ipsum lorem ipsum"
+                            },
+                            {
+                                title: "Message",
+                                content: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+                            }
+                        ]}
+                    />
+                </div>
+            </div>
         </>
     )
 }
