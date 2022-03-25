@@ -1,0 +1,48 @@
+
+.workflowTitle {
+    width: 100%;
+}
+
+.workflowTitle input {
+    height: 40px;
+}
+
+.workflowTitle > div:nth-child(1),
+.workflowTitle > div:nth-child(2) {
+    flex: 2;
+}
+
+.workflowTitle > div:nth-child(3) {
+    flex: 1;
+}
+
+.workflowTitle > div:nth-child(3) > div{
+    margin: 0;
+}
+
+.workflowTitle > div:nth-child(3) > div button {
+    margin-top: 5px;
+    width: 50%;
+    min-width: 67px;
+}
+
+@media screen and (max-width: 768px) {
+    .workflowTitle {
+        flex-direction: column;
+    }
+    .workflowTitle > div {
+        width: 100%;
+    }
+    .workflowTitle > div:nth-child(3) {
+        text-align: center;
+    }
+    .workflowTitle > div > div{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {   
+    .workflowTitle > div:nth-child(3) > div button {
+        width: 100%;
+    }
+}

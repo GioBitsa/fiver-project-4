@@ -5,5 +5,6 @@ import Statistics from "./Statistics/Statistics";
 import FiltersComponent from "./FiltersComponent/FiltersComponent";
 import ContactsComponent from "./ContactsComponent/ContactsComponent";
 import MessangerComponent from "./MessangerComponent/MessangerComponent";
+import WorkflowComponent from "./WorkflowComponent/WorkflowComponent";
 
-export { LayoutComponent, Socials, Profiles, Statistics, FiltersComponent, ContactsComponent, MessangerComponent };
+export { LayoutComponent, Socials, Profiles, Statistics, FiltersComponent, ContactsComponent, MessangerComponent, WorkflowComponent };
