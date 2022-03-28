@@ -1,3 +1,12 @@
+.main-page {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.main-page.animated {
+    opacity: 1;
+}
+
 #mainLayout{
     height: 100vh;
 }
