@@ -1,0 +1,116 @@
+
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #F2F7FA;
+}
+
+.sideContainer {
+    width: 100%;
+    height: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideContainer:nth-child(1){
+    background-color: #F2F7FA;
+}
+
+.sideContainer:nth-child(1) > div {
+    margin-bottom: 15rem;
+    text-align: center;
+}
+
+.sideContainer:nth-child(1) > div h2{
+    margin: 0.5rem 0 1rem 0;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.sideContainer:nth-child(1) > div p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sideContainer:nth-child(1) > div span{
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.sideContainer:nth-child(2){
+    background-color: white;
+}
+
+.loginForm {
+    width: 100%;
+    max-width: 400px;
+}
+
+.loginButton {
+    width: 100%;
+}
+
+.divider {
+    border-top: 2px solid rgba(0, 0, 0, 0.6) !important;
+    position: relative;
+}
+
+.divider::after {
+    content: 'OR';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px;
+    background-color: white;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.signUp {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.signUp h3 {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.sideContainer:nth-child(2) h2{
+    margin: 0.5rem 0 1rem 0;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width: 1000px) {
+    .loginForm {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainContainer {
+        flex-direction: column;
+    }
+    .sideContainer:nth-child(1){
+        display: none;
+    }
+    .loginForm {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .loginForm {
+        max-width: 300px;
+    }
+}
