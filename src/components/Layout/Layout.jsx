@@ -140,9 +140,9 @@ const LayoutComponent = ({ children }) => {
     return (
         <Layout id='mainLayout'>
             <Sider breakpoint='sm' onBreakpoint={() => checkResponsive()} trigger={null} collapsible collapsed={collapsed}>
-                <div className="logo" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Link to='/login' className="logo" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     {collapsed ? <img src="https://i.ibb.co/djdpkFJ/logo-small.png" alt="logo small" /> : <img src="https://i.ibb.co/vZ56dMq/logo-white.png" alt="logo" />}
-                </div>
+                </Link>
                 <Menu className={style.menu} theme="dark" mode="inline" selectedKeys={checkSelectedMenuItem()}>
                     {menuItemsContent.map((item, index) => {
                         return (
