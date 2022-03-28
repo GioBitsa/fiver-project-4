@@ -30,7 +30,7 @@ const LoginComponent = () => {
                     <h2>Welcome Back</h2>
                     <div className={style.signUp}>
                         <h3>New here?</h3>
-                        <a href="">Sign up</a>
+                        <a href="#">Sign up</a>
                     </div>
                     <Form.Item
                         name="username"
@@ -63,7 +63,7 @@ const LoginComponent = () => {
                             <Checkbox>Remember me</Checkbox>
                         </Form.Item>
 
-                        <a className="login-form-forgot" href="" style={{ float: 'right' }}>
+                        <a className="login-form-forgot" href="#" style={{ float: 'right' }}>
                             Forgot password
                         </a>
                     </Form.Item>
