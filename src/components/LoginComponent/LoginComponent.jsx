@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Input, Button, Checkbox, Divider } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import style from './LoginComponent.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const LoginComponent = () => {
 
+    const [loading, setLoading] = useState(false)
+    const navigate = useNavigate();
+
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            navigate("/");
+        }, 2000)
     };
 
     return (
@@ -69,7 +78,7 @@ const LoginComponent = () => {
                     </Form.Item>
 
                     <Form.Item>
-                        <Button size='large' type="primary" htmlType="submit" className={style.loginButton}>
+                        <Button loading={loading} size='large' type="primary" htmlType="submit" className={style.loginButton}>
                             Log in
                         </Button>
                     </Form.Item>
