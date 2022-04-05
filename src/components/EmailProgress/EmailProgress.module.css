@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.header svg {
+    margin-right: 5px;
+    font-size: 21px;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+}
+
+.progressContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progressContent p {
+    margin-top: 10px;
+    color: rgb(110, 113, 145);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.text {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.text h3 {
+    font-size: 2rem;
+    line-height: 3.375rem;
+}
+
+.text p {
+    color: rgb(110, 113, 145);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+@media screen and (max-width: 991px) {
+    .progress {
+        flex-direction: column;
+    }
+
+    .text {
+        align-self: center;
+        margin-bottom: 20px;
+    }
+}

@@ -143,7 +143,7 @@ const LayoutComponent = ({ children }) => {
         <Layout id='mainLayout'>
             <Sider breakpoint='sm' onBreakpoint={() => checkResponsive()} trigger={null} collapsible collapsed={collapsed}>
                 <Link to='/' className="logo" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    {collapsed ? <img src="https://i.ibb.co/djdpkFJ/logo-small.png" alt="logo small" /> : <img src="https://i.ibb.co/vZ56dMq/logo-white.png" alt="logo" />}
+                    {collapsed ? <img src="https://i.ibb.co/Fh66y56/Harvesthub-logo-white-2-small.png" alt="logo small" /> : <img src="https://i.ibb.co/sC62wCp/Harvesthub-logo-white-2.png" alt="logo" />}
                 </Link>
                 <Menu className={style.menu} theme="dark" mode="inline" selectedKeys={checkSelectedMenuItem()}>
                     {menuItemsContent.map((item, index) => {
