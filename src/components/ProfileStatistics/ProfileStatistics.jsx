@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, Tag } from 'antd'
 import style from './ProfileStatistics.module.css'
 import { RiVipCrownLine } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 
 const ProfileStatistics = () => {
     return (
@@ -11,15 +12,15 @@ const ProfileStatistics = () => {
             <h2>Random User</h2>
             <div className={style.profileInfo}>
                 <div>
-                    <a href="#">484</a>
+                    <Link to="/analytics">484</Link>
                     <p>Connections</p>
                 </div>
                 <div>
-                    <a href="#">23</a>
+                    <Link to="/analytics">23</Link>
                     <p>Pending</p>
                 </div>
                 <div>
-                    <a href="#">51</a>
+                    <Link to="/analytics">51</Link>
                     <p>Profile views</p>
                 </div>
             </div>
