@@ -1,3 +1,7 @@
+.profileStatistics {
+    overflow-x: hidden;
+}
+
 .profileStatistics>div>span:first-child {
     margin-left: 100%;
     margin-bottom: 10px;
