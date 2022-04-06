@@ -5,6 +5,7 @@ import EmailProgress from '../EmailProgress/EmailProgress'
 import ProfileStatistics from '../ProfileStatistics/ProfileStatistics'
 import LinkedinDetails from '../LinkedinDetails/LinkedinDetails'
 import EmailDetails from '../EmailDetails/EmailDetails'
+import ProfileStatus from '../ProfileStatus/ProfileStatus'
 
 const Statistics = () => {
     return (
@@ -26,7 +27,14 @@ const Statistics = () => {
                 </Row>
             </Col>
             <Col span={24} xl={{ order: 2, span: 8 }} order={1}>
-                <ProfileStatistics />
+                <Row gutter={[8, 8]} >
+                    <Col span={24} md={12} xl={24}>
+                        <ProfileStatistics />
+                    </Col>
+                    <Col span={24} md={12} xl={24}>
+                        <ProfileStatus />
+                    </Col>
+                </Row>
             </Col>
         </Row>
     )

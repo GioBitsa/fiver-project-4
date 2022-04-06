@@ -1,0 +1,58 @@
+.mainCard {
+    height: calc(100% - 20px);
+}
+
+.mainCard>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    color: rgb(20, 20, 43);
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 30px;
+}
+
+.content a>div {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.content a>div h3 {
+    color: rgb(20, 20, 43);
+    font-size: 2rem;
+    line-height: 2.375rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.content a>div svg {
+    font-size: 50px;
+    background-color: rgba(234, 63, 74, 0.063);
+    padding: 0.75rem;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.content a p {
+    color: rgb(110, 113, 145);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
