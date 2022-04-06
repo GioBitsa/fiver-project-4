@@ -7,7 +7,7 @@
     opacity: 1;
 }
 
-#mainLayout{
+#mainLayout {
     height: 100vh;
 }
 
@@ -18,11 +18,11 @@
     cursor: pointer;
     transition: color 0.3s;
 }
-  
+
 #mainLayout .trigger:hover {
     color: #1890ff;
 }
-  
+
 #mainLayout .logo {
     height: 32px;
     margin: 16px;
@@ -33,7 +33,7 @@
     height: 32px;
     object-fit: contain;
 }
-  
+
 .site-layout .site-layout-background {
     background: #F2F7FA;
 }
@@ -67,6 +67,10 @@
 
 #workflowComponent .ant-drawer-body {
     padding: 12px 24px !important;
+}
+
+.analyticsDropdown .ant-tabs-nav-list {
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {
