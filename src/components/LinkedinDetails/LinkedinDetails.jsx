@@ -1,4 +1,4 @@
-import React, { useState, PureComponent } from 'react'
+import React, { useState } from 'react'
 import { Card, Col, Collapse, Row, Tabs } from 'antd'
 import style from './LinkedinDetails.module.css'
 import { FaLinkedinIn } from 'react-icons/fa'
@@ -7,7 +7,7 @@ import { BsArrowReturnLeft, BsLink45Deg } from 'react-icons/bs'
 import { BiMessageDetail, BiWifi2 } from 'react-icons/bi'
 import { IoIosSend } from 'react-icons/io'
 import { AiOutlineEye } from 'react-icons/ai'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const { Panel } = Collapse;
 const { TabPane } = Tabs;
