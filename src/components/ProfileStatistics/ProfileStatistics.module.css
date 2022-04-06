@@ -1,0 +1,54 @@
+.profileStatistics>div>span:first-child {
+    margin-left: 100%;
+    margin-bottom: 10px;
+    transform: translateX(-100%);
+    display: inline-flex;
+    align-items: center;
+}
+
+.profileStatistics>div>span:first-child svg {
+    margin-right: 5px;
+}
+
+.profileStatistics img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.profileStatistics h2 {
+    font-weight: 700;
+    color: rgb(20, 20, 43);
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profileInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profileInfo>div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profileInfo>div a {
+    color: rgb(20, 20, 43);
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 500;
+}
+
+.profileInfo>div p {
+    color: rgb(110, 113, 145);
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
