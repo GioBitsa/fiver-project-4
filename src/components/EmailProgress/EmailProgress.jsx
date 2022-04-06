@@ -7,7 +7,7 @@ const EmailProgress = () => {
     return (
         <Card>
             <div className={style.header}>
-                <MdEmail />
+                <MdEmail style={{ color: 'rgb(90, 86, 233)' }} />
                 Email
             </div>
             <div className={style.progress}>

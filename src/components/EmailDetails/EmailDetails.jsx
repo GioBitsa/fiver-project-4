@@ -8,7 +8,7 @@ const { Panel } = Collapse;
 const EmailDetails = () => {
     return (
         <Collapse defaultActiveKey={['1']} ghost expandIconPosition='left'>
-            <Panel className={style.panelHeader} extra={<MdEmail />} header="Email" key="1">
+            <Panel className={style.panelHeader} extra={<MdEmail style={{ color: 'rgb(90, 86, 233)' }} />} header="Email" key="1">
                 <p>asdfafsasfs</p>
             </Panel>
         </Collapse >

@@ -7,7 +7,7 @@ const LineChartComponent = () => {
     return (
         <Card>
             <div className={style.header}>
-                <FaLinkedinIn />
+                <FaLinkedinIn style={{ color: 'rgb(49, 90, 231)' }} />
                 LinkedIn
             </div>
             <div className={style.progress}>
