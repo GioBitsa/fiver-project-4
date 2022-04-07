@@ -6,6 +6,7 @@ import ProfileStatistics from '../ProfileStatistics/ProfileStatistics'
 import LinkedinDetails from '../LinkedinDetails/LinkedinDetails'
 import EmailDetails from '../EmailDetails/EmailDetails'
 import ProfileStatus from '../ProfileStatus/ProfileStatus'
+import LiveFeedComponent from '../LiveFeedComponent/LiveFeedComponent'
 
 const Statistics = () => {
     return (
@@ -33,6 +34,9 @@ const Statistics = () => {
                     </Col>
                     <Col span={24} md={12} xl={24}>
                         <ProfileStatus />
+                    </Col>
+                    <Col span={24}>
+                        <LiveFeedComponent />
                     </Col>
                 </Row>
             </Col>

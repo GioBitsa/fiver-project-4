@@ -1,0 +1,148 @@
+.mainCard {
+    margin: 20px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h3 {
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.headerInteractions,
+.interactions {
+    display: flex;
+    align-items: center;
+}
+
+.interactions {
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.headerInteractions>div,
+.interactions>div {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.headerInteractions>div:last-child {
+    margin: 0;
+}
+
+.headerInteractions>div span {
+    margin-right: 5px;
+    color: rgb(20, 20, 43);
+    font-weight: 500;
+}
+
+.interactions>div span {
+    margin-left: 5px;
+    color: rgb(20, 20, 43);
+    font-weight: 500;
+}
+
+.headerInteractions>div svg,
+.interactions>div svg {
+    font-size: 16px;
+}
+
+.actualItem {
+    width: 100%;
+    display: flex;
+    border: 1px solid #f0f0f0;
+    border-left: 2px solid rgb(90, 86, 233);
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin-top: 5px;
+}
+
+.actualItem>div:nth-child(1) {
+    flex: 1;
+    max-width: 60px;
+}
+
+.actualItem>div:nth-child(2) {
+    flex: 3;
+}
+
+.actualItem>div:nth-child(2) h4 {
+    text-transform: capitalize;
+    font-weight: 500;
+    color: rgb(20, 20, 43);
+}
+
+.actualItem>div:nth-child(2) p {
+    display: flex;
+    align-items: center;
+    color: rgb(110, 113, 145);
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+.actualItem>div:nth-child(2) p svg {
+    margin-right: 5px;
+}
+
+.actualItem>div:nth-child(3) {
+    flex: 1;
+    max-width: 60px;
+    align-self: flex-end;
+    text-align: right;
+    color: rgb(110, 113, 145);
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+.textContainer {
+    display: flex;
+}
+
+.textContainer>div {
+    flex: 1;
+}
+
+@media screen and (max-width: 1600px) {
+    .textContainer {
+        flex-direction: column;
+    }
+
+    .textContainer>div:first-child {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .textContainer {
+        flex-direction: row;
+    }
+
+    .textContainer>div:first-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .textContainer {
+        flex-direction: column;
+    }
+
+    .textContainer>div:first-child {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}

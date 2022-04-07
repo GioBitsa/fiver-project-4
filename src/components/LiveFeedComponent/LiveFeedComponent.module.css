@@ -1,0 +1,14 @@
+.title {
+    color: rgb(20, 20, 43);
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.filters {
+    margin: 10px 0;
+}
+
+.items {
+    margin-top: 20px;
+}
