@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Card, Col, Drawer, Row } from 'antd'
-import style from '../WorkflowComponent.module.css'
+import style from './CardComponent.module.css'
 import { DeleteOutlined, DisconnectOutlined, MailOutlined, MessageOutlined, MoreOutlined } from '@ant-design/icons'
 
 const CardComponent = ({ title, color, content, profileCard }) => {

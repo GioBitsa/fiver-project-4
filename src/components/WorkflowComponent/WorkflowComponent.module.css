@@ -1,4 +1,3 @@
-
 .workflowTitle {
     width: 100%;
 }
@@ -7,20 +6,20 @@
     height: 40px;
 }
 
-.workflowTitle > div:nth-child(1),
-.workflowTitle > div:nth-child(2) {
+.workflowTitle>div:nth-child(1),
+.workflowTitle>div:nth-child(2) {
     flex: 2;
 }
 
-.workflowTitle > div:nth-child(3) {
+.workflowTitle>div:nth-child(3) {
     flex: 1;
 }
 
-.workflowTitle > div:nth-child(3) > div{
+.workflowTitle>div:nth-child(3)>div {
     margin: 0;
 }
 
-.workflowTitle > div:nth-child(3) > div button {
+.workflowTitle>div:nth-child(3)>div button {
     margin-top: 5px;
     width: 50%;
     min-width: 67px;
@@ -33,7 +32,7 @@
     overflow-x: auto;
 }
 
-.workflowMainContainer > div {
+.workflowMainContainer>div {
     margin-right: 50px;
 }
 
@@ -42,12 +41,12 @@
     flex-direction: column;
 }
 
-.workflowSecondaryContainer > div {
+.workflowSecondaryContainer>div {
     margin-bottom: 20px;
     position: relative;
 }
 
-.workflowSecondaryContainer > div::after {
+.workflowSecondaryContainer>div::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -61,85 +60,22 @@
     .workflowTitle {
         flex-direction: column;
     }
-    .workflowTitle > div {
+
+    .workflowTitle>div {
         width: 100%;
     }
-    .workflowTitle > div:nth-child(3) {
+
+    .workflowTitle>div:nth-child(3) {
         text-align: center;
     }
-    .workflowTitle > div > div{
+
+    .workflowTitle>div>div {
         margin: 0;
     }
 }
 
-@media screen and (max-width: 500px) {   
-    .workflowTitle > div:nth-child(3) > div button {
+@media screen and (max-width: 500px) {
+    .workflowTitle>div:nth-child(3)>div button {
         width: 100%;
     }
-}
-
-
-/* Card Component */
-
-.itemCard {
-    width: 350px;
-    max-width: 350px;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.rightSide {
-    display: flex;
-    align-items: center;
-}
-
-.imgContainer {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
-
-.imgContainer img {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #1890ff;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 50%;
-}
-
-.imgContainer img:nth-child(1){
-    transform: translateX(0);
-}
-
-.imgContainer img:nth-child(2){
-    transform: translateX(-10px);
-}
-
-.imgContainer img:nth-child(3){
-    transform: translateX(-20px);
-}
-
-.contentContainer {
-    margin: 20px 0;
-    overflow-x: hidden;
-}
-
-.contentContainer > div:nth-child(2) div {
-    white-space: nowrap;
-}
-
-.drawerBody {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.drawerButton {
-    width: 100%;
-    border-radius: 2px;
-    font-weight: bold !important;
-    margin: 5px 0;
 }
