@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Card, Form, Input, Select, Space } from 'antd'
 import style from './WorkflowComponent.module.css'
 import CardComponent from './components/CardComponent';
+import FlowComponent from '../FlowComponent/FlowComponent';
 
 const { Option } = Select;
 
@@ -29,7 +30,7 @@ const WorkflowComponent = () => {
                     </Space>
                 </Form>
             </Card>
-            <div className={style.workflowMainContainer}>
+            {/* <div className={style.workflowMainContainer}>
                 <div>
                     <CardComponent
                         profileCard={true}
@@ -87,7 +88,8 @@ const WorkflowComponent = () => {
                         ]}
                     />
                 </div>
-            </div>
+            </div> */}
+            <FlowComponent />
         </>
     )
 }
