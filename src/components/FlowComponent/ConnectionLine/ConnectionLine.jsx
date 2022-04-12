@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({
+const ConnectionLine = () => ({
     sourceX,
     sourceY,
     targetX,
@@ -19,3 +19,5 @@ export default ({
         </g>
     );
 };
+
+export default ConnectionLine

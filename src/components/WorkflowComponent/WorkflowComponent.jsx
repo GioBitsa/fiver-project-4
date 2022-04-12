@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Card, Form, Input, Select, Space } from 'antd'
 import style from './WorkflowComponent.module.css'
-import CardComponent from './components/CardComponent';
+// import CardComponent from './components/CardComponent';
 import FlowComponent from '../FlowComponent/FlowComponent';
 
 const { Option } = Select;
