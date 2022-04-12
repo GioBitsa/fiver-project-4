@@ -109,7 +109,7 @@ const HorizontalFlow = () => {
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
     const [reactFlowInstance, setReactFlowInstance] = useState(null);
 
-    const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), []);
+    const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
 
     const onDragOver = useCallback((event) => {
         event.preventDefault();
@@ -161,7 +161,7 @@ const HorizontalFlow = () => {
 
             setNodes((nds) => nds.concat(newNode));
         },
-        [reactFlowInstance]
+        [reactFlowInstance, setNodes]
     );
 
     return (
