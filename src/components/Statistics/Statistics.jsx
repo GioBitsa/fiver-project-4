@@ -7,6 +7,7 @@ import LinkedinDetails from '../LinkedinDetails/LinkedinDetails'
 import EmailDetails from '../EmailDetails/EmailDetails'
 import ProfileStatus from '../ProfileStatus/ProfileStatus'
 import LiveFeedComponent from '../LiveFeedComponent/LiveFeedComponent'
+import HotLeads from '../HotLeads/HotLeads'
 
 const Statistics = () => {
     return (
@@ -18,6 +19,9 @@ const Statistics = () => {
                     </Col>
                     <Col span={24} sm={12}>
                         <EmailProgress />
+                    </Col>
+                    <Col span={24}>
+                        <HotLeads />
                     </Col>
                     <Col span={24}>
                         <LinkedinDetails />
