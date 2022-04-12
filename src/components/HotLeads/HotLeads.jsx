@@ -53,7 +53,7 @@ const data = [
 const HotLeads = () => {
     return (
         <Collapse defaultActiveKey={['1']} ghost expandIconPosition='left'>
-            <Panel className={style.panelHeader} extra={<img src='https://i.ibb.co/SyYP9bF/output-onlinepngtools.png' style={{ color: 'rgb(49, 90, 231)' }} />} header="HotLeads" key="1">
+            <Panel className={style.panelHeader} extra={<img src='https://i.ibb.co/SyYP9bF/output-onlinepngtools.png' alt='hot leads logo' />} header="HotLeads" key="1">
                 <ResponsiveContainer width="100%" height={300}>
                     <BarChart
                         width={500}
