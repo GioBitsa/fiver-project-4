@@ -82,3 +82,10 @@
         padding: 24px 10px !important;
     }
 }
+
+.react-flow__handle {
+    width: 10px !important;
+    height: 10px !important;
+    z-index: 1;
+    background-color: #1890ff !important;
+}

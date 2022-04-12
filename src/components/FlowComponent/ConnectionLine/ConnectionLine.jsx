@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ConnectionLine = () => ({
+const ConnectionLine = ({
     sourceX,
     sourceY,
     targetX,
